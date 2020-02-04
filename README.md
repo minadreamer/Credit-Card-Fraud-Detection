@@ -28,6 +28,8 @@ The `Class` feature is the target variable and it takes value 1 in case of fraud
 
 It is important that credit card companies are able to recognize fraudulent credit card transactions so that customers are not charged for transactions that they did not conduct. The ideal credit card fraud detection algorithm would be to detect 100% of fraudulent transactions, whilst minimising the number of falsely flagged non-fraudulent transactions.
 
+### Objective Criteria:   
+
 Therefore the model selection has a priority rank of;
 Correctly identify as many fraudulent transactions as possible.
 Minimising the type II error, False Negatives (fraudulent transactions that were flagged as non-fraudulent transactions)
@@ -41,7 +43,7 @@ For the wider business case,  having a  manageable number of case of fraudulent 
 
 
 
-here is that a customer would rather they be contacted for a
+In the case of criteria 3  that a customer would rather they be contacted for
 
 ## Methodology
 
@@ -56,15 +58,32 @@ Another technic is adaptive synthetic sampling approach (ADASYN). This is shifts
 
 <b>Logistic Regression:</b>
 
-This is an initial baseline model, it does not require any scaling. However, we will us the standard scaled data.
+- Assumptions: Standard Scaling
 
+- Hyperparameter optimization: C = 1
+
+- Model interpretation:
+
+Did very well at detecting Frauds. However, the False positive rate is very high, being 4.4 times higher than the actual number of frauds. The False Positive rate is 96% which is clearly unacceptable. So it passed the first of our criteria but failed on points 2 & 3.
+
+
+
+### Other models Tested:
 
 <b>K Nearest Neighbours:</b>
 
-
-
 <b>Support Vector Machine:</b>
 
-
-
 <b>XGBoost:</b>
+
+<b>Random Forest:</b>
+
+
+## Threshold Selection
+Prevalence = 0.00172
+Fraud coef = 122.21
+normal coef = 88.29
+
+## Features
+
+V14 & V10 were most important
