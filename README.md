@@ -112,5 +112,5 @@ The threshold selected was 0.9, which gave the results below:
 
 ![Picture2.png](image.png)
 
-V10, V12 & V14 are the most important featurs for the final model of a random forest. These are the features that the customer should monitor more tightly as they are the promanat features in fraudulent cases.
+V10, V12 & V14 are the most important features for the final model of a random forest. These are the features that the customer should monitor more tightly as they are the prominent features in fraudulent cases.
 
